@@ -13,7 +13,7 @@ type ErrReturnBody struct {
 }
 
 type GetReturnBody struct {
-	Value string `json:"message"`
+	Value string `json:"value"`
 }
 
 func (s *Server) HandleGetKey() http.HandlerFunc {

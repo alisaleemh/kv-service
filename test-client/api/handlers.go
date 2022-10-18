@@ -27,7 +27,7 @@ func (s *Server) HandleTestDelete() http.HandlerFunc {
 		}
 
 		resp := ErrReturnBody{
-			Message: "Test Succesful",
+			Message: "Test Successful",
 		}
 		jsonResp, err := json.Marshal(resp)
 		if err != nil {
@@ -52,7 +52,7 @@ func (s *Server) HandleTestOverwrite() http.HandlerFunc {
 		}
 
 		resp := ErrReturnBody{
-			Message: "Test Succesful",
+			Message: "Test Successful",
 		}
 		jsonResp, err := json.Marshal(resp)
 		if err != nil {

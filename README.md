@@ -1,21 +1,20 @@
-#KV Service 
+# KV Service 
 
 
-This is an independent KV service. This service is powered by Bolt db underneath and provides an API to perform Get, Delete, and Insert operations.
+This is an independent KV service and a test client that checks the deletion and overwrite. This service is powered by Bolt db underneath and provides an API to perform Get, Delete, and Insert operations.
 
 
 ## Running locally
 
 
-To run locally, you can run `go run main.go`. The default ports for the kv-service is 8080 and 8081 for the test-client.
+To run locally, you can run `go run main.go` for the two services kv-service and test-client in separate terminals. The default ports for the kv-service is 8080 and 8081 for the test-client.
 
-To run in a docker container, you need to run:
+`cd $repo_root/kv-service/`
+`go run main.go`
 
-```
-make docker-build
-docker run xx
-docker run xx
-```
+`cd $repo_root/test-client/`
+`go run main.go`
+
 
 ## Code Organization
 
@@ -30,5 +29,12 @@ There are two directories, kv-service and test-client.
 `main`: Creates all dependencies and injects them into the `service` and `server`
 
 ## Postman Collection
+
+Each service has its own postman collection with the api spec.
+
+```
+$repo-root/kv-service/kv-service.postman_collection.json 
+$repo-root/test/client/test-client.postman_collection.json 
+```
 
 You can import the postman collection and test the services out.
